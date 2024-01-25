@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  padding: 133px 30px;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,6 +17,12 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 711px 399px;
+  gap: 30px;
 }
 
 h1,
@@ -35,4 +42,249 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  margin: 1px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: self-start;
+}
+
+.content__list {
+  width: 399px;
+  display: grid;
+  position: relative;
+  gap: 30px;
+  height: 298px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 1px;
+
+}
+
+.content__list-item {
+  padding: 2px;
+  width: 390px;
+}
+
+.title {
+  margin-bottom: 24px;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.content__video-card-description-container {
+  width: 100%;
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  text-overflow: ellipsis;
+}
+
+
+.content__video-card-description {
+  line-height: 16.2px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.result__video {
+  height: 386px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.result__video-container {
+  display: flex;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 200px 194px;
+  justify-content: space-between;
+}
+
+.search-form {
+  height: 54px;
+  width: 100%;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__label {
+  width: fit-content;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button:hover, .content__video-card:hover, .search-form__label:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  
+}
+
+.search-form__textfield {
+  width: 225px;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  border-left: none;
+  border-right: none;
+  appearance: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.button {
+  padding: 6px 140px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  color: #FFF;
+  text-align: center;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  padding: 6px 73px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  margin-top: 2px;
+  margin-left: 2px;
+  width: 19px;
+  height: 19px;
+  outline: 1px solid #FFF;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+
+.search-form__label:focus, .button:focus, .content__card-link:focus {
+  outline: none;
+}
+
+label:has(:focus-visible) {
+  border-radius: none;
+  outline: 1px solid #FFF;
+}
+
+.search-form__submit-button:focus-visible {
+  border-radius: none;
+  outline-offset: 2px;
+  outline: 1px solid #FFF;
+}
+
+.more-button {
+  width:399px;
+  display: flex;
+  align-self: center;
+}
+
+.more-button:focus-visible {
+  border-radius: none;
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+  margin: 1px;
+}
+
+.content__list-item:has(:focus-visible) {
+  outline: 1px solid #FFF;
+  outline-offset: 0px;
+  margin: 1px;
+}
+
+input[type='checkbox']:checked + span {
+  border: 2px solid #1b1919;
+  background-color: #FFF;
+}
+
+.button:active, .content__list-item:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
